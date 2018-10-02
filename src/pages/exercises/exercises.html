@@ -1,0 +1,87 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Liste des exercices</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item-group>
+            <ion-item-divider color="light">A</ion-item-divider>
+            <ion-item-divider color="light">B</ion-item-divider>
+            <ion-item-sliding #item>
+                <button ion-item>
+                    Box jump
+                </button>
+                <ion-item-options side="right">
+                    <button ion-button color="secondary">
+                        <ion-icon name="checkmark"></ion-icon>
+                        Favori
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding #item>
+                <button ion-item>
+                    Burpees
+                </button>
+                <ion-item-options side="right">
+                    <button ion-button color="danger">
+                        <ion-icon name="close"></ion-icon>
+                        Favori
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="light">F</ion-item-divider>
+            <button ion-item>
+                Front-lever hold
+            </button>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="light">J</ion-item-divider>
+            <button ion-item>
+                Jumprope
+            </button>
+            <button ion-item>
+                Jumping jacks
+            </button>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="light">K</ion-item-divider>
+            <button ion-item>
+                Kettlebell swing
+            </button>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="light">P</ion-item-divider>
+            <button ion-item>
+                Push-ups
+            </button>
+            <button ion-item>
+                Pull-ups
+            </button>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="light">S</ion-item-divider>
+            <button ion-item>
+                Squats
+            </button>
+            <button ion-item>
+                Snatch
+            </button>
+            <button ion-item>
+                Steps
+            </button>
+        </ion-item-group>
+    </ion-list>
+    <ion-fab bottom right>
+        <button ion-fab>
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>
