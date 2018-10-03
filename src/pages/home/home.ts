@@ -1,6 +1,8 @@
+import {auth} from "firebase";
 import {Component} from '@angular/core';
-import { Camera, CameraOptions } from '@ionic-native/camera';
-import {AlertController, LoadingController, NavController} from 'ionic-angular';
+import {AngularFireAuth} from "@angular/fire/auth";
+import {Camera, CameraOptions} from '@ionic-native/camera';
+import {AlertController, LoadingController} from 'ionic-angular';
 
 @Component({
     selector: 'page-home',
@@ -8,7 +10,7 @@ import {AlertController, LoadingController, NavController} from 'ionic-angular';
 })
 export class HomePage {
 
-    constructor(public loadingCtrl: LoadingController, private alertCtrl: AlertController, private navCtrl: NavController, private camera: Camera) {
+    constructor(public loadingCtrl: LoadingController, private alertCtrl: AlertController, private camera: Camera, private afAuth: AngularFireAuth) {
         let loading = this.loadingCtrl.create();
 
         loading.present();
@@ -17,6 +19,7 @@ export class HomePage {
             loading.dismiss();
         }, 500);
     }
+
     public onTakePhotoClicked(): void {
         const options: CameraOptions = {
             quality: 100,
@@ -36,6 +39,10 @@ export class HomePage {
         }, (err) => {
             alert(JSON.stringify(err));
         });
+    }
+
+    public login(): void {
+        this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
     }
 
 }

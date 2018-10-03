@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 
 /**
  * Generated class for the ExercisesPage page.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-exercises',
-  templateUrl: 'exercises.html',
+    selector: 'page-exercises',
+    templateUrl: 'exercises.html',
 })
 export class ExercisesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ExercisesPage');
-  }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad ExercisesPage');
+    }
 
 }
