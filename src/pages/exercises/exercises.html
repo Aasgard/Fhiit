@@ -10,6 +10,24 @@
 <ion-content>
     <ion-list>
         <ion-item-group>
+            <ion-item-divider color="light">
+                <ion-icon name="star"></ion-icon>
+                Favoris
+            </ion-item-divider>
+            <button ion-item ion-item (click)="onEditExerciseButtonClicked()">
+                <ion-icon name="flame" color="danger" item-start></ion-icon>
+                <ion-label>Air squats</ion-label>
+            </button>
+            <button ion-item ion-item (click)="onEditExerciseButtonClicked()">
+                <ion-icon name="flame" color="danger" item-start></ion-icon>
+                Australian pull-ups
+            </button>
+            <button ion-item ion-item (click)="onEditExerciseButtonClicked()">
+                <ion-icon name="flame" color="danger" item-start></ion-icon>
+                Australian chin-ups
+            </button>
+        </ion-item-group>
+        <ion-item-group>
             <ion-item-divider color="light">A</ion-item-divider>
             <button ion-item ion-item (click)="onEditExerciseButtonClicked()">
                 <ion-label>Air squats</ion-label>

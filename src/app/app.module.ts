@@ -13,6 +13,7 @@ import {InfosPage} from "../pages/infos/infos";
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from "@angular/fire/auth";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
+import {CreateOrUpdateExerciseComponent} from "../components/modals/create-or-update-exercise/create-or-update-exercise";
 
 export const firebaseConfig = {
     apiKey: "AIzaSyAO1zxLejOssd9fcPZQGl6-GWm0pzIeMG8",
@@ -28,6 +29,7 @@ export const firebaseConfig = {
         HomePage,
         WorkoutsPage,
         ExercisesPage,
+        CreateOrUpdateExerciseComponent,
         InfosPage,
         TabsPage
     ],
@@ -40,6 +42,7 @@ export const firebaseConfig = {
     ],
     bootstrap: [IonicApp],
     entryComponents: [
+        CreateOrUpdateExerciseComponent,
         MyApp,
         HomePage,
         WorkoutsPage,
